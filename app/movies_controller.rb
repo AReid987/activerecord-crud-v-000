@@ -24,12 +24,14 @@ end
 
 def can_be_created_in_a_block(args = {})
   Movie.create do |m|
+    binding.pry
     m.title = args[:title]
     m.release_date = args[:release_date]
     m.director = args[:director]
     m.lead = args[:lead]
     m.in_theaters = args[:in_theaters]
   end
+  
 end
 
 def can_get_the_first_item_in_the_database
